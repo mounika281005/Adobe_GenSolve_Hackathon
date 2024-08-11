@@ -43,5 +43,17 @@ To get started with Curvetopia, you'll need to clone the repository and install 
 git clone https://github.com/yourusername/curvetopia.git
 cd curvetopia
 pip install -r requirements.txt
+```
 
 ## Usage
+
+Once you have the project set up, you can start experimenting with the various functionalities:
+
+### Regularize Curves
+
+```python
+from curvetopia import regularize
+
+input_path = "path/to/your/input.csv"
+output_path = "path/to/your/output.csv"
+regularize(input_path, output_path)
