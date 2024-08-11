@@ -11,7 +11,7 @@ Welcome to Curvetopia! This project is dedicated to the identification, regulari
 5. [Examples](#examples)
 6. [Expected Outputs](#expected-outputs)
 7. [Evaluation Criteria](#evaluation-criteria)
-8. [Use Cases](#use-cases)
+8. [Acknowledgments](#acknowledgments)
 9. [Contributing](#contributing)
 10. [License](#license)
 
@@ -57,3 +57,68 @@ from curvetopia import regularize
 input_path = "path/to/your/input.csv"
 output_path = "path/to/your/output.csv"
 regularize(input_path, output_path)
+```
+
+### Symmetry Detection
+
+```python
+import cv2
+from symmetry_detection import detect_symmetries
+
+image_path = 'path_to_your_image.png'
+symmetry_count = detect_symmetries(image_path)
+print(f"Number of symmetries detected: {symmetry_count}")
+```
+
+### Completing Curves
+
+```python
+from curve_completion import complete_curve
+
+incomplete_curve_path = 'path_to_incomplete_curve.csv'
+complete_curve(incomplete_curve_path)
+```
+
+## Examples
+Check out the problems_ex directory for sample input and output files:
+
+-**isolated.csv:** Simple, isolated curves for regularization.
+
+-**frag0.csv & frag1.csv:** Fragmented shapes requiring regularization and symmetry detection.
+
+-**occlusion1.csv:** Curves that need completion due to partial occlusion.
+
+You can run the example scripts to see how the algorithms work on these samples.
+
+## Expected Outputs
+-**Regularized Shapes:** Curves that are adjusted to match regular geometric shapes.
+
+-**Symmetry Analysis:** Identification of symmetrical aspects of curves, including lines of reflection symmetry.
+
+-**Completed Curves:** Curves that have been accurately completed, filling in gaps caused by occlusions or fragmentation.
+
+## Evaluation Criteria
+
+The regularization and symmetry detection tasks will be evaluated based on the number of regular geometric shapes and symmetry lines accurately identified in the input. For curve completion, the evaluation will focus on how well the algorithms complete curves with varying levels of occlusion.
+
+## Acknowledgments
+ - **OpenCV:** For robust image processing capabilities.
+ - **NumPy:** For efficient numerical operations.
+ - **Matplotlib:** For versatile data visualization tools.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute to Curvetopia, please follow these steps:
+
+1. Fork the repository.
+2. Create a new branch (git checkout -b feature/your-feature-name).
+3. Commit your changes (git commit -m 'Add some feature').
+4. Push to the branch (git push origin feature/your-feature-name).
+5. pen a Pull Request.
+6. Please make sure your code adheres to the project's coding standards and passes all tests.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.
+You can now copy and paste this entire block into your README.md file and make any additional edits as needed.
+   
